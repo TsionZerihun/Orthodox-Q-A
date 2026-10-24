@@ -1,0 +1,19 @@
+Typography notes for Orthodox Q&A homepage fidelity work
+
+- The approved mock’s exact typeface is not identified from evidence in this repository.
+- Closest licensed substitutes in use (via next/font / Google Fonts, SIL Open Font License):
+  - Playfair Display — high-contrast serif for brand, headings, and question titles
+  - Source Sans 3 — lighter readable sans for metadata, excerpts, and UI chrome
+- Ethiopic UI text continues to use the bundled Noto Ethiopic (SIL OFL) in ethiopic.woff2.
+
+Background watermark (updated from owner close-ups):
+- Source crop: frontend/public/references/detail_sidebar_cross_pattern.png
+  (owner-supplied Meskel interlocking cross knotwork close-up)
+- Processed asset: frontend/public/assets/orthodox-cross-watermark.png
+  (ivory keyed out; warm pale-gold strokes; soft edge dissolve; no rectangular plate;
+   fixed to viewport lower-left via .cross-watermark; multiply + radial mask; hidden ≤760px)
+
+Parchment corner (updated from owner close-ups):
+- Source crop: frontend/public/references/detail_header_parchment.png
+- Processed asset: frontend/public/assets/parchment-corner.png
+  (red/black Ethiopic lettering scrap with soft fade; placed extreme top-left of header)

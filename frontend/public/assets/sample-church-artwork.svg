@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Sample layout image</title>
+  <desc id="desc">Local placeholder for question card image layout. Not original sacred artwork.</desc>
+  <rect width="320" height="320" fill="#2a2520"/>
+  <rect x="18" y="18" width="284" height="284" fill="none" stroke="#c5a877" stroke-width="2" opacity="0.7"/>
+  <circle cx="160" cy="150" r="78" fill="none" stroke="#ead091" stroke-width="3" opacity="0.85"/>
+  <circle cx="160" cy="150" r="48" fill="none" stroke="#c5a877" stroke-width="1.5" opacity="0.6"/>
+  <path d="M160 88v124M112 150h96" stroke="#ead091" stroke-width="2.5" opacity="0.9"/>
+  <rect x="40" y="250" width="240" height="36" rx="4" fill="#1a1714"/>
+  <text x="160" y="273" text-anchor="middle" fill="#ead091" font-family="Georgia, serif" font-size="14">SAMPLE LAYOUT ONLY</text>
+</svg>

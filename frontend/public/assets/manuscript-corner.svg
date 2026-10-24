@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <!--
+    Home Light top-left card ornament.
+    Overlapping stepped L-strokes traced from the approved mock mask.
+  -->
+  <g
+    stroke="#c9b08a"
+    stroke-width="0.95"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+    opacity="0.58"
+  >
+    <!-- Outer L, lightly rounded at the bend -->
+    <path d="M1.6 23.25V8.4Q1.6 3.6 8.1 3.6H23.25"/>
+    <!-- Mid L -->
+    <path d="M5.55 23.25V8.55H23.25"/>
+    <!-- Vertical overshoot crossing the outer top bar -->
+    <path d="M14.55 2.35V17.55"/>
+    <!-- Horizontal overshoot crossing the outer left bar -->
+    <path d="M0.45 17.55H18.05"/>
+    <!-- Inner right riser -->
+    <path d="M18.05 8.55V17.55"/>
+    <!-- Short step below the lower bar -->
+    <path d="M10.55 17.55V23.25"/>
+  </g>
+</svg>

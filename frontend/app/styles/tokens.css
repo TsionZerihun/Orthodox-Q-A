@@ -1,0 +1,78 @@
+/* Shared design tokens — full-bleed desktop like approved Home Light.
+   Exact mock font family is unknown; Playfair Display + Source Sans 3 are OFL substitutes. */
+:root{
+  --font-serif:var(--font-playfair),"Times New Roman",Georgia,serif;
+  --font-sans:var(--font-source-sans),Ethiopic,system-ui,sans-serif;
+
+  --bg:#faf8f3;
+  --bg-deep:#f0ede6;
+  --panel:#ffffff;
+  --ink:#1a2133;
+  --ink-soft:#2a3348;
+  --muted:#7b879c;
+  --muted-strong:#5f6d86;
+  --line:#e8e4dc;
+  --line-soft:#efece5;
+  --accent:#9a6f36;
+  --accent-deep:#7d5828;
+  --accent-soft:#f0ebe2;
+  --gold-line:#c4a882;
+  --meta:#7b879c;
+  --focus:#9a6f36;
+  --shadow:0 1px 2px rgba(26,33,51,.03);
+  --shadow-hover:0 2px 6px rgba(26,33,51,.05);
+
+  --radius-sm:6px;
+  --radius:10px;
+  --radius-lg:12px;
+  --header-h:58px;
+  /* Fixed side columns; center feed grows. Outer pad ~24–32px. */
+  --sidebar-w:200px;
+  --rail-w:240px;
+  --pad-x:24px;
+  --gap:20px;
+  --ease:180ms ease;
+  --press:120ms ease;
+}
+
+html[data-theme=dark]{
+  --bg:#141819;
+  --bg-deep:#101314;
+  --panel:#1c2022;
+  --ink:#eceef1;
+  --ink-soft:#d5d8df;
+  --muted:#a7aeb8;
+  --muted-strong:#c0c5cc;
+  --line:#34393c;
+  --line-soft:#2a3033;
+  --accent:#e0c47a;
+  --accent-deep:#ead091;
+  --accent-soft:#2a3034;
+  --gold-line:#c4a46a99;
+  --meta:#a7aeb8;
+  --focus:#e0c47a;
+  --shadow:none;
+  --shadow-hover:0 2px 8px rgba(0,0,0,.28);
+  color-scheme:dark;
+}
+
+@media(min-width:1280px){
+  :root{
+    --sidebar-w:240px;
+    --rail-w:280px;
+    --pad-x:28px;
+    --gap:24px;
+    --header-h:60px;
+  }
+}
+
+/* ~1586 and wider: same side columns, feed fills leftover width */
+@media(min-width:1500px){
+  :root{
+    --sidebar-w:260px;
+    --rail-w:300px;
+    --pad-x:32px;
+    --gap:28px;
+    --header-h:62px;
+  }
+}
