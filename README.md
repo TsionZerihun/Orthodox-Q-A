@@ -1,89 +1,170 @@
-# Small download edition
-
-Large reference PNGs are omitted. Add your own mockup ZIP to mockups/archives/ and extracted PNGs to frontend/public/references/. Read DOWNLOAD_NOTE.md first.
-
 # Orthodox Q&A
 
-An Ethiopian Orthodox question-and-answer website built with **Next.js / React, TypeScript and Django**. The target integrations are Supabase PostgreSQL, Auth and Storage. This repository is the **initial working foundation**, not the completed forum.
+A calm Ethiopian Orthodox question-and-answer website for Orthodox and non-Orthodox visitors. This repository is **Orthodox Q&A only** — not the separate Church & Gedam Discovery application.
 
-## Start here
+The product goal is a respectful forum: public reading without signup; verified email before participation; topics, questions, answers, comments, follows, saves, notifications, teacher verification, and moderated community tools. Confirmed product rules live in the planning documents under `docs/`.
 
-- **First GitHub push:** give Cursor [CURSOR_GITHUB_PROMPT.md](CURSOR_GITHUB_PROMPT.md).
-- **Continue development:** [CURSOR_MASTER_PROMPT.md](CURSOR_MASTER_PROMPT.md).
-- **Plans and requirements:** [documentation index](docs/README.md).
-- **Live Notion planning:** [Notion links](docs/NOTION_LINKS.md).
-- **Approved mockups / your existing ZIP:** [mockups guide](mockups/README.md).
-- **Actual code coverage:** [implementation status](docs/IMPLEMENTATION_STATUS.md).
+## Technology stack
 
-## Repository layout
+| Layer | Role |
+| --- | --- |
+| **Next.js (App Router) + TypeScript** (`frontend/`) | UI, routing, and a **browser-local demo adapter** for interactive flows without production auth |
+| **Django** (`backend/`) | Forum API starter (models, endpoints, tests). Target owner of authorization and business rules |
+| **Supabase (planned)** | PostgreSQL, Auth, and Storage in production. **Having a Supabase project does not mean integration is complete.** Auth, Storage, and live PostgreSQL wiring remain unfinished until explicitly verified |
+
+## Current implementation status (evidence-based)
+
+See [docs/IMPLEMENTATION_STATUS.md](docs/IMPLEMENTATION_STATUS.md), [docs/PAGE_CHECKLIST.md](docs/PAGE_CHECKLIST.md), and [docs/FRONTEND_REQUIREMENTS_AUDIT.md](docs/FRONTEND_REQUIREMENTS_AUDIT.md) for detail.
+
+**Working locally today**
+
+- Multi-page Next.js UI for the planned main routes (home, topics, search, question detail, profile, saved, settings, account, notifications, teacher, moderation, admin, references viewer).
+- Shared shell: logo, themes, Meskel watermark, manuscript card corners, EN/አማ toggle (partial Amharic).
+- **Local demo adapter** (`frontend/lib/demo/`): simulated sign-in, questions/answers/comments, votes, follow/save, notifications, teacher application, moderation/admin previews — persisted in the browser and labeled as demo. **Not** production authentication, email, uploads, or server authorization.
+- Django starter API and tests; with an empty `DATABASE_URL`, Django uses local SQLite for isolated API preview only.
+- Approved design reference images are tracked under `frontend/public/references/` and viewable at `/references` when the frontend is running.
+
+**Not complete / not claimed**
+
+- Real Supabase Auth (email verification, recovery), JWT enforcement, Storage uploads, RLS, or production PostgreSQL schema matching Database Design v2.
+- Exact pixel parity with every mock (for example, topic card illustrations are missing as reusable assets; notifications has no dedicated approved mock).
+- Full Amharic copy, rich-text editors, production ranking, and full staff/audit compliance.
+- Django models are a **starter**, not the full reviewed schema.
+
+Do not treat demo UI behavior as live backend integration.
+
+## Repository structure
 
 ```text
-frontend/             Next.js source, lockfile, env example
-  app/                Interface, account callback and reference viewer
-  public/assets/      Shared logo, icons/decoration and licensed fonts
-  public/references/  14 original approved design PNGs, stored once
-backend/              Django source, initial migrations, tests and env example
-  config/             Settings and URL routing
-  forum/              Starter models, endpoints and tests
-docs/                 Requirements, roadmap, architecture, DB/API plans, checks
-mockups/              Design manifest and archives/ for owner's chosen ZIP
-.github/              Starter CI workflow and PR template
-AGENTS.md             Project rules for coding assistants
-CONTRIBUTING.md       Development and commit conventions
+frontend/                 Next.js app, demo adapter, env example, lockfile
+  app/                    Routes (pages)
+  components/             Shared UI
+  lib/demo/               Browser-local demo state (not production auth)
+  public/assets/          Logo, fonts (with licenses), shared decoration
+  public/references/      Canonical approved mockup images (one copy each)
+backend/                  Django project, starter models/migrations/tests
+docs/                     Requirements, roadmap, architecture, DB/API plans, status
+mockups/                  Design inventory linking to public/references/
+.github/                  CI workflow and pull request template
+AGENTS.md                 Project rules for assistants working in this repo
+CONTRIBUTING.md           Contribution conventions
 ```
-
-## Current scope
-
-Public question browsing/search/topics and initial verified-identity question/answer endpoints exist. The UI reconstructs the approved light/dark visual direction and includes all original references at `/references`. Many planned features/pages remain incomplete; the ZIP is not an exact pixel replica or a production-ready site.
-
-Supabase account setup is **deferred**. Public local browsing needs no credentials. Sign-in and protected writes currently require actual Auth configuration; simulated local flows are future work and must be clearly isolated. No claim of real email/Storage/PostgreSQL integration testing is made.
 
 ## Local setup
 
-Requirements: Node >=20.9 and Python >=3.11. Extract and open this repository folder in Cursor.
+Requirements: **Node ≥ 20.9**, **Python ≥ 3.11**.
 
-Terminal 1, from repository root:
+### Backend
 
 ```bash
 cd backend
+```
+
+```bash
 python3 -m venv .venv
+```
+
+```bash
 source .venv/bin/activate
+```
+
+```bash
 pip install -r requirements-lock.txt
+```
+
+```bash
 cp .env.example .env
+```
+
+```bash
 python manage.py migrate
+```
+
+```bash
 python manage.py seed_demo
+```
+
+```bash
 python manage.py runserver 127.0.0.1:8000
 ```
 
-Terminal 2, from repository root:
+Leave `DATABASE_URL` empty in `backend/.env` to use SQLite for isolated local API preview. **Do not run starter migrations against a production or shared Supabase database** until the schema work is intentionally planned and approved.
+
+### Frontend
+
+In a second terminal:
 
 ```bash
 cd frontend
+```
+
+```bash
 npm ci
+```
+
+```bash
 cp .env.example .env.local
+```
+
+```bash
 npm run dev
 ```
 
-Open http://localhost:3000. Original references: http://localhost:3000/references. Seeded questions are illustrative, not real teacher endorsements. Empty DATABASE_URL selects local SQLite only for isolated preview. Never run starter migrations against an existing production database.
+Open [http://localhost:3000](http://localhost:3000). Reference images: [http://localhost:3000/references](http://localhost:3000/references).
 
-## Checks
+Interactive posting and account flows work through the **local demo adapter** without Supabase. Seeded/demo questions are illustrative, not real teacher endorsements.
+
+## Environment configuration
+
+| File | Purpose |
+| --- | --- |
+| `backend/.env.example` | Template for Django settings and optional `DATABASE_URL` |
+| `backend/.env` | Local secrets (gitignored). Never commit |
+| `frontend/.env.example` | Template for API URL and optional Supabase public keys |
+| `frontend/.env.local` | Local frontend env (gitignored). Never commit |
+
+Optional later: set a Supabase Session pooler `DATABASE_URL` (with SSL) in `backend/.env` only after you are ready to connect intentionally. Configuring URL values is not the same as finishing Auth, Storage, or schema integration.
+
+## Tests and checks
+
+Backend (with virtualenv activated; empty `DATABASE_URL` for SQLite):
 
 ```bash
-# backend, activated virtual environment
 python manage.py check
+```
+
+```bash
 python manage.py makemigrations --check --dry-run
+```
+
+```bash
 python manage.py test
-# frontend
-npm run build
+```
+
+Frontend:
+
+```bash
 npm run typecheck
 ```
 
-See [verification](docs/VERIFICATION.md) for checks actually performed and untested integration. CI repeats the starter checks, not a complete end-to-end/privacy audit.
+```bash
+npm run build
+```
 
-## Plans, design and changes
+Recorded results: [docs/VERIFICATION.md](docs/VERIFICATION.md). CI under `.github/workflows/` repeats these starter checks; it is not a full privacy or end-to-end audit.
 
-The Markdown database v2/API design are included planning contracts; unresolved implementation constraints remain tracked. Notion links supplement these files without duplicating the entire workspace. Update implementation status as code changes. Keep the forum visually distinct from Church & Gedam Discovery.
+## Documentation and design
 
-Add your existing mockup ZIP to `mockups/archives/` and update [manifest](mockups/MANIFEST.md). No owner-supplied archive is claimed included yet. Do not commit credentials, local databases, private evidence, dependencies or build output. Font-license notices are retained; a project distribution license has not been selected.
+| Document | Contents |
+| --- | --- |
+| [docs/README.md](docs/README.md) | Documentation index |
+| [docs/product/REQUIREMENTS.md](docs/product/REQUIREMENTS.md) | Product requirements summary |
+| [docs/product/ROADMAP.md](docs/product/ROADMAP.md) | Milestones |
+| [docs/architecture/DECISIONS.md](docs/architecture/DECISIONS.md) | Architecture notes |
+| [docs/Orthodox_QA_Database_Design_Reviewed_v2.md](docs/Orthodox_QA_Database_Design_Reviewed_v2.md) | Database design (planning) |
+| [docs/Orthodox_QA_API_Design.md](docs/Orthodox_QA_API_Design.md) | API design (planning) |
+| [docs/VISUAL_CHECKLIST.md](docs/VISUAL_CHECKLIST.md) | Visual acceptance checklist |
+| [mockups/README.md](mockups/README.md) | Mockup inventory with preview links |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
 
-**No GitHub remote, public publication or deployment is configured by this package.**
+No project distribution license has been selected yet. Font license notices under `frontend/public/assets/` are retained.

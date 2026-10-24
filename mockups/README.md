@@ -1,16 +1,37 @@
-# Small download edition
-
-Large reference PNGs are omitted. Add your own mockup ZIP to mockups/archives/ and extracted PNGs to frontend/public/references/. Read DOWNLOAD_NOTE.md first.
-
 # Mockups and design references
 
-## Original PNG references already included
-The repository stores one copy of the 14 approved reference images in [frontend/public/references](../frontend/public/references/). Run the frontend and open /references to browse them. References cover Home light/dark, Topics, Search, Question Detail/long scroll, Profile, Saved Questions, Settings, Account Access without figures, Teacher Workspace, Moderation, Administration, and hover details.
+Canonical tracked images live in [`frontend/public/references/`](../frontend/public/references/). The in-app viewer is `/references` when the frontend is running. These files are **design targets**, not proof that every screen is fully implemented.
 
-These are original design targets, not claims that all screens are implemented. Keep filenames and source images intact.
+Do not add a second copy of the same PNGs under `mockups/`. Optional ZIP archives are kept outside this repository if needed for backup; individual previewable images take priority here.
 
-## Your existing mockup ZIP
-The approved archive is at **archives/Orthodox_QA_Approved_Mockups.zip** (from Orthodox_QA_Exact_Visual_Prototype.zip). Matching PNGs are in `frontend/public/references/`. See MANIFEST.md for state. If replacing the archive later, keep a clear version/date in the manifest. Do not add extracted duplicate images when they are already in public/references.
+## Inventory (present in repository)
 
-## Design consistency
-See [visual checklist](../docs/VISUAL_CHECKLIST.md). Keep the Bible logo, consistent outline icons, tiny top-left gold card strokes, quiet background, ivory/charcoal themes and figure-free account screens. No generic redesign.
+| File | Page / use | Theme | Approval |
+| --- | --- | --- | --- |
+| [00_Attached_Home_Light_Approved.jpg](../frontend/public/references/00_Attached_Home_Light_Approved.jpg) | Home (owner attachment) | Light | Approved attachment |
+| [01_Home_Light.png](../frontend/public/references/01_Home_Light.png) | Home | Light | Approved mock |
+| [02_Topics.png](../frontend/public/references/02_Topics.png) | Topics | Light | Approved mock |
+| [03_Search_Results.png](../frontend/public/references/03_Search_Results.png) | Search results | Light | Approved mock |
+| [04_Question_Detail.png](../frontend/public/references/04_Question_Detail.png) | Question detail | Light | Approved mock |
+| [05_Profile.png](../frontend/public/references/05_Profile.png) | Profile | Light | Approved mock |
+| [06_Saved_Questions.png](../frontend/public/references/06_Saved_Questions.png) | Saved questions | Light | Approved mock |
+| [07_Settings.png](../frontend/public/references/07_Settings.png) | Settings | Light | Approved mock |
+| [08_Account_Access_No_Figures.png](../frontend/public/references/08_Account_Access_No_Figures.png) | Account access (no figures) | Light | Approved mock |
+| [09_Teacher_Workspace.png](../frontend/public/references/09_Teacher_Workspace.png) | Teacher workspace | Light | Approved mock |
+| [10_Moderation.png](../frontend/public/references/10_Moderation.png) | Moderation | Light | Approved mock |
+| [11_Administration.png](../frontend/public/references/11_Administration.png) | Administration | Light | Approved mock |
+| [12_Question_Detail_Long_Scroll.png](../frontend/public/references/12_Question_Detail_Long_Scroll.png) | Question detail (long scroll) | Light | Approved mock |
+| [13_Home_Dark.png](../frontend/public/references/13_Home_Dark.png) | Home | Dark | Approved mock |
+| [14_Home_Hover_Detail.png](../frontend/public/references/14_Home_Hover_Detail.png) | Home hover / detail crop | Light | Approved mock |
+| [detail_header_parchment.png](../frontend/public/references/detail_header_parchment.png) | Parchment lettering close-up (asset source) | — | Owner detail crop |
+| [detail_sidebar_cross_pattern.png](../frontend/public/references/detail_sidebar_cross_pattern.png) | Cross / Meskel pattern close-up (asset source) | — | Owner detail crop |
+
+## Missing / not claimed
+
+| Item | Status |
+| --- | --- |
+| Dedicated Notifications page mock | **Not present** — no approved PNG for `/notifications` |
+| Reusable topic-card illustration set from Topics mock | **Not present** as separate assets (mock shows illustrations; only line icons are implemented) |
+| Mockup ZIP inside `mockups/archives/` | **Not tracked here** (optional local backup only; images above are canonical) |
+
+See also [MANIFEST.md](MANIFEST.md) and [docs/VISUAL_CHECKLIST.md](../docs/VISUAL_CHECKLIST.md).

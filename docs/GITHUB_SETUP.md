@@ -1,18 +1,12 @@
-# Initial GitHub setup
+# Repository hosting notes
 
-The owner will have Cursor push this project. No remote repository has been created or pushed from this package.
+The project remote is the owner’s GitHub repository. Prefer a **private** repository while distribution and licensing are undecided. No project open-source license has been selected.
 
-Before the first commit:
-1. Add the actual Notion URLs in docs/NOTION_LINKS.md.
-2. Add the owner's chosen mockup ZIP to mockups/archives/ and update its manifest.
-3. Review git status/diff, ignored files and tracked secrets. Keep both .env.example templates; exclude actual .env/.env.local, databases and dependencies.
-4. Run checks. Do not fabricate author identity or use global git config.
-5. Resolve intended GitHub owner/repository URL and visibility. Recommend private while the owner is deciding distribution; do not assume or create a public repository.
+## Practices
+1. Keep secrets out of Git: track only `.env.example` files; never commit `.env`, `.env.local`, SQLite files, private evidence, or dependency/build folders.
+2. Do not invent remotes, Notion URLs, licenses, or author identity.
+3. Prefer normal pushes; do not force-push or rewrite shared history unless the owner explicitly requests it.
+4. If authentication fails, sign in locally with GitHub CLI or the system credential helper — never paste tokens into repository files or chat.
+5. Update [NOTION_LINKS.md](NOTION_LINKS.md) when the owner supplies additional planning URLs.
 
-For a new local folder without .git, initialize main and stage only reviewed files. For an existing checkout, inspect current branch, worktree changes and remotes first. Do not overwrite or reinitialize an existing repository.
-
-Suggested initial commit: `chore: initialize Orthodox Q&A foundation and project documentation`.
-
-After confirming the owner's exact repository, push main normally without force. If the remote already contains commits, inspect and reconcile using a feature branch/PR; do not overwrite history. Report resulting URL, branch and commit SHA only after the push succeeds. If authentication is missing, guide the user through their own local GitHub/CLI sign-in; never ask for a token pasted in chat.
-
-Use [Cursor initial push prompt](../CURSOR_GITHUB_PROMPT.md) to perform the workflow.
+CI under `.github/workflows/` runs starter backend and frontend checks. It does not replace privacy, security, or visual acceptance review.

@@ -1,7 +1,8 @@
 # Page checklist — Orthodox Q&A frontend
 
 Authority: `frontend/public/references/` approved mocks + `docs/product/REQUIREMENTS.md`.  
-Supabase remains deferred; interactive flows that need a backend use the **local demo adapter** (`frontend/lib/demo/`). Demo outcomes are simulated and labeled — not production auth, email, uploads, or persistence.
+Inventory and GitHub preview links: `mockups/README.md`.  
+Supabase integration is incomplete; interactive flows that need a backend use the **local demo adapter** (`frontend/lib/demo/`). Demo outcomes are simulated and labeled — not production auth, email, uploads, or persistence.
 
 Status legend:
 - **implemented** — route + primary UI built against mock

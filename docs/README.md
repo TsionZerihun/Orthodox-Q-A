@@ -1,30 +1,27 @@
-# Small download edition
-
-Large reference PNGs are omitted. Add your own mockup ZIP to mockups/archives/ and extracted PNGs to frontend/public/references/. Read DOWNLOAD_NOTE.md first.
-
 # Documentation index
 
 ## Product and plans
-- [Product requirements](product/REQUIREMENTS.md): agreed experience and first-release scope.
-- [Roadmap](product/ROADMAP.md): milestones and remaining work, not a claim of completion.
-- [Notion links](NOTION_LINKS.md): live planning links and where to add the remaining links.
+- [Product requirements](product/REQUIREMENTS.md) — agreed experience and first-release scope
+- [Roadmap](product/ROADMAP.md) — milestones and remaining work
+- [Notion links](NOTION_LINKS.md) — live planning links (some still pending)
 
-## Architecture
-- [Architecture and decisions](architecture/DECISIONS.md).
-- [Database design, reviewed v2](Orthodox_QA_Database_Design_Reviewed_v2.md).
-- [API design](Orthodox_QA_API_Design.md).
+## Architecture and contracts
+- [Architecture and decisions](architecture/DECISIONS.md)
+- [Database design, reviewed v2](Orthodox_QA_Database_Design_Reviewed_v2.md)
+- [API design](Orthodox_QA_API_Design.md)
 
-## Engineering
-- [Implementation status](IMPLEMENTATION_STATUS.md): what actually works versus planned.
-- [Page checklist](PAGE_CHECKLIST.md): every planned route ↔ mock ↔ status ↔ gaps.
-- [Verification record](VERIFICATION.md): completed checks and external integration limitations.
-- [Visual checklist](VISUAL_CHECKLIST.md).
-- [Development guide](DEVELOPMENT.md).
-- [Contribution workflow](../CONTRIBUTING.md).
-- [Initial GitHub push guide](GITHUB_SETUP.md).
+## Engineering status
+- [Implementation status](IMPLEMENTATION_STATUS.md) — what actually works versus planned
+- [Page checklist](PAGE_CHECKLIST.md) — routes ↔ mocks ↔ status ↔ gaps
+- [Frontend requirements audit](FRONTEND_REQUIREMENTS_AUDIT.md) — requirement-by-requirement evidence
+- [Verification record](VERIFICATION.md) — checks run and deferred integrations
+- [Visual checklist](VISUAL_CHECKLIST.md)
+- [Development guide](DEVELOPMENT.md)
+- [Contribution workflow](../CONTRIBUTING.md)
+- [Repository hosting notes](GITHUB_SETUP.md)
 
 ## Design assets
-- [Mockups folder](../mockups/README.md): archive placeholder and reference location.
-- [Approved reference images](../frontend/public/references/): one tracked copy of each original PNG.
+- [Mockups inventory](../mockups/README.md) — relative links to approved images
+- [Approved reference images](../frontend/public/references/) — canonical tracked copies
 
-The original database/API documents are retained as planning snapshots. Do not silently relabel their unchecked engineering tasks as implemented. Later refinements belong in reviewed commits and the status/decision log.
+Planning Markdown (database/API) is the implementation contract. Do not treat unchecked engineering tasks in those documents as implemented. Update [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md) when behavior changes.
