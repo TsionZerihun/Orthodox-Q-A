@@ -1,6 +1,6 @@
 # Orthodox Q&A
 
-A calm Ethiopian Orthodox question-and-answer website for Orthodox and non-Orthodox visitors. This repository is **Orthodox Q&A only** — not the separate Church & Gedam Discovery application.
+A calm Ethiopian Orthodox question-and-answer website for Orthodox and non-Orthodox visitors. This repository is **Orthodox Q&A only** — 
 
 The product goal is a respectful forum: public reading without signup; verified email before participation; topics, questions, answers, comments, follows, saves, notifications, teacher verification, and moderated community tools. Confirmed product rules live in the planning documents under `docs/`.
 
