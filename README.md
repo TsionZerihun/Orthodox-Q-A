@@ -41,10 +41,10 @@ frontend/                 Next.js app, demo adapter, env example, lockfile
   components/             Shared UI
   lib/demo/               Browser-local demo state (not production auth)
   public/assets/          Logo, fonts (with licenses), shared decoration
-  public/references/      Canonical approved mockup images (one copy each)
+  public/references/      Final mock PNGs (same set as mockups/; GitHub + /references viewer)
 backend/                  Django project, starter models/migrations/tests
 docs/                     Requirements, roadmap, architecture, DB/API plans, status
-mockups/                  Design inventory linking to public/references/
+mockups/                  Final approved mockup PNGs (+ inventory README)
 .github/                  CI workflow and pull request template
 AGENTS.md                 Project rules for assistants working in this repo
 CONTRIBUTING.md           Contribution conventions

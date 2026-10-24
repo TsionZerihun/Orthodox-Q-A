@@ -14,7 +14,7 @@
 | `docs/product/ROADMAP.md` | Read | Milestones; not a card-level board |
 | `docs/PAGE_CHECKLIST.md`, `docs/VISUAL_CHECKLIST.md` | Read | Page/mock inventory |
 | `docs/NOTION_LINKS.md` | Read | Link table |
-| `frontend/public/references/*.png` | Present | 14 approved mocks + detail assets |
+| `frontend/public/references/*.png` | Present | Final mock set (14 PNGs; same as `mockups/`) |
 | Notion: Database-design task | Partial fetch | High-level identity tables; full remote page not treated as complete audit of unread sections |
 | Notion: Backup/restore task | Partial fetch | Ops/backup requirements — out of frontend demo scope |
 | Notion: Main Q&A project, Development board, Product overview, API-design task, DB v2 subpage | **Source unavailable** | Listed as Pending in `NOTION_LINKS.md`; no accessible contents audited |

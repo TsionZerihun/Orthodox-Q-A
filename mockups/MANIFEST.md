@@ -1,16 +1,14 @@
 # Design manifest
 
-Canonical mock images: `frontend/public/references/` (see [README.md](README.md) for the full inventory and GitHub-preview links).
+Source: owner `final mock` folder. Tracked copies:
 
-| Item | Location | State |
-| --- | --- | --- |
-| Approved page mocks (01–14) + attached home JPG | `frontend/public/references/` | Present |
-| Detail crops (parchment, cross pattern) | `frontend/public/references/detail_*.png` | Present (asset sources) |
-| Shared logo, fonts, decoration | `frontend/public/assets/` | Present (with font licenses) |
-| Derived parchment / watermark assets used in UI | `frontend/public/assets/` | Present |
-| Sample layout artwork thumbnail | `frontend/public/assets/sample-church-artwork.png` | Present (layout only) |
-| Notifications page mock | — | **Missing** |
-| Topic card illustration assets | — | **Missing** as reusable files |
-| ZIP under `mockups/archives/` | — | **Not included** in the repository tree (optional local backup outside the repo) |
+- `mockups/*.png` — 14 final mock images (see [README.md](README.md))
+- `frontend/public/references/*.png` — same files for the `/references` viewer
 
-Reference images predate parts of the current UI. Visual approval must compare running screens to these files; presence of a mock does not mean the page is complete.
+| Present | Notes |
+| --- | --- |
+| `01_home.png` | Composite board (Home / Topics / Search / Question) |
+| `02_Account_Flow.png` | Account flow composite (renamed from `02_.png`) |
+| `02_Topics.png` … `13_Home_Dark.png` | Single-page mocks |
+
+Older attachments (hover crop, parchment/cross detail crops, previous `01_Home_Light.png` naming) were removed from these folders when replacing with the final mock set.

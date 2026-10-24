@@ -13,7 +13,7 @@ Status legend:
 
 | Page | Route | Approved mock | Status | Missing visual / interaction | Evidence / notes |
 | --- | --- | --- | --- | --- | --- |
-| Home (light) | `/` | `01_Home_Light.png`, `00_Attached_…`, `14_Home_Hover_Detail.png` | **implemented · demo · verified** | Exact pixel fidelity not claimed; Following uses demo follows only | 1586×992 live vs mock; Quora sticky; fixed Meskel; corners |
+| Home (light) | `/` | `01_home.png` (composite) + single-page mocks in `mockups/` | **implemented · demo · verified** | Exact pixel fidelity not claimed; Following uses demo follows only | Live vs final mock set; Quora sticky; fixed Meskel; corners |
 | Home (dark) | `/` + theme | `13_Home_Dark.png` | **implemented · demo** | Further charcoal polish possible | Theme toggle + `data-theme=dark` |
 | Home (mobile) | `/` | (responsive requirement) | **implemented · demo** | — | 390×844 screenshot; hamburger + mobile ask |
 | Topics | `/topics` | `02_Topics.png` | **implemented · demo** | **Blocked asset:** topic card illustrations not in repo — line icons used | Follow/unfollow demo; recent-in-topic list |
@@ -22,7 +22,7 @@ Status legend:
 | Profile | `/profile/[id]` | `05_Profile.png` | **implemented · demo** | Avatar uploads **awaiting-supabase** Storage | Answers/questions tabs; verified badge |
 | Saved | `/saved` | `06_Saved_Questions.png` | **implemented · demo** | — | Private list + empty; requires demo sign-in |
 | Settings | `/settings` | `07_Settings.png` | **implemented · demo** | Photo upload simulated | Profile / language / security / notifications; **demo role switch** |
-| Account access | `/account` | `08_Account_Access_No_Figures.png` | **implemented · demo** | Real email **awaiting-supabase**; parchment + watermark from shared assets (no figures) | login / signup / verify / reset |
+| Account access | `/account` | `08_Account_Access_No_Figures.png`, `02_Account_Flow.png` (composite) | **implemented · demo** | Real email **awaiting-supabase**; parchment + watermark from shared assets (no figures) | login / signup / verify / reset |
 | Auth callback | `/auth/callback` | (requirement, no dedicated mock) | **implemented · awaiting-supabase** | Needs configured Supabase | Recovery password form |
 | Notifications | `/notifications` | **no dedicated mock** | **implemented · demo** | Layout from requirements — gap recorded | Inbox + mark read; essential notices |
 | Teacher workspace | `/teacher` | `09_Teacher_Workspace.png` | **implemented · demo** | Evidence upload simulated | Application form or unanswered queue by demo role |
@@ -53,5 +53,5 @@ Status legend:
 ## Gaps that must not be invented
 
 1. **Topic card illustrations** in `02_Topics.png` — no approved reusable illustration set beyond line icons; recorded as visual gap.
-2. **Dedicated Notifications page mock** — not in the 14-PNG set; UI follows requirements + settings patterns.
+2. **Dedicated Notifications page mock** — not in the final mock set; UI follows requirements + settings patterns.
 3. **Supabase Auth/Storage/PostgreSQL** — deferred by owner; demo adapter isolated from production permissions.

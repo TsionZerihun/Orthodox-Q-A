@@ -21,7 +21,7 @@
 - [Repository hosting notes](GITHUB_SETUP.md)
 
 ## Design assets
-- [Mockups inventory](../mockups/README.md) — relative links to approved images
-- [Approved reference images](../frontend/public/references/) — canonical tracked copies
+- [Mockups inventory](../mockups/README.md) — final mock PNGs with preview links
+- [Approved reference images](../frontend/public/references/) — same final mock set (used by `/references` and GitHub browsing)
 
 Planning Markdown (database/API) is the implementation contract. Do not treat unchecked engineering tasks in those documents as implemented. Update [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md) when behavior changes.
