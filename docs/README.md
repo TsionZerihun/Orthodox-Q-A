@@ -8,6 +8,7 @@
 ## Architecture and contracts
 - [Architecture and decisions](architecture/DECISIONS.md)
 - [Database design, reviewed v2](Orthodox_QA_Database_Design_Reviewed_v2.md)
+- [Database design diagrams](../database-design/README.md) — system / domain architecture PNGs
 - [API design](Orthodox_QA_API_Design.md)
 
 ## Engineering status

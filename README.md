@@ -44,6 +44,7 @@ frontend/                 Next.js app, demo adapter, env example, lockfile
   public/references/      Final mock PNGs (same set as mockups/; GitHub + /references viewer)
 backend/                  Django project, starter models/migrations/tests
 docs/                     Requirements, roadmap, architecture, DB/API plans, status
+database-design/          Database architecture diagrams (planning)
 mockups/                  Final approved mockup PNGs (+ inventory README)
 .github/                  CI workflow and pull request template
 AGENTS.md                 Project rules for assistants working in this repo
@@ -162,6 +163,7 @@ Recorded results: [docs/VERIFICATION.md](docs/VERIFICATION.md). CI under `.githu
 | [docs/product/ROADMAP.md](docs/product/ROADMAP.md) | Milestones |
 | [docs/architecture/DECISIONS.md](docs/architecture/DECISIONS.md) | Architecture notes |
 | [docs/Orthodox_QA_Database_Design_Reviewed_v2.md](docs/Orthodox_QA_Database_Design_Reviewed_v2.md) | Database design (planning) |
+| [database-design/README.md](database-design/README.md) | Database architecture diagrams |
 | [docs/Orthodox_QA_API_Design.md](docs/Orthodox_QA_API_Design.md) | API design (planning) |
 | [docs/VISUAL_CHECKLIST.md](docs/VISUAL_CHECKLIST.md) | Visual acceptance checklist |
 | [mockups/README.md](mockups/README.md) | Mockup inventory with preview links |
