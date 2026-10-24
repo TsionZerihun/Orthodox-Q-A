@@ -4,6 +4,10 @@ Architecture diagrams for the forum data model and related flows. These illustra
 
 Application code and migrations remain under `backend/` / `frontend/`. This folder is documentation only.
 
+## Review document
+
+- [DATABASE_ARCHITECTURE_REVIEW.pdf](DATABASE_ARCHITECTURE_REVIEW.pdf) — database architecture review (PDF)
+
 ## Diagrams
 
 ### 01 · System architecture
